@@ -11,6 +11,8 @@
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr); 
     max-width: 426px;
+    /* height: 800px;
+    width: 600px; */
   }
   
   .grid-item {
@@ -18,6 +20,14 @@
     border: 1px solid #ddd;
     text-align: center;
 }
+
+/* .square1 .circle_black {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center; 
+} */
 .square1 {
     border: 1.5px solid black;
     width: 50px;
@@ -25,6 +35,7 @@
     background-color: black;
     padding: 0.25em;
     text-align: center;
+    align-items: center;
     margin: 0px;
    
 }
@@ -35,13 +46,21 @@
     background-color: white;
     padding: 0.25em;
     text-align: center;
+    align-items: center;
     margin: 0px;
 }
 
 .circle_black {
-    width: 30px;
-    height: 30px;
-    background-color: black;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #444141;
     border-radius: 50%;
-  
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }

@@ -1,5 +1,7 @@
 
 const container = document.getElementById("container");
+let gridArea = container.getBoundingClientRect();
+
 function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -18,7 +20,26 @@ function makeRows(rows, cols) {
 
 makeRows(8, 7);
 
-let drafts = {
+let gridContainer = {
+  x:Math.floor(gridArea.width/7),
+  y:Math.floor(gridArea.height/8)
+}
+document.addEventListener("DOMContentLoaded",buildGameBoard);
+
+let circle1 = {}
+
+function buildGameBoard() {
+  console.log("This is the game board");
+  circle1 = document.createElement("div");
+  circle1.classList.add("circle_black");
+  circle1.x = gridContainer.top;
+  circle1.y = gridContainer.left;
+  circle1.style.top = circle1.y +"px";
+  circle1.style.left = circle1.x +"px";
+  container.appendChild(circle1);
+}
+
+let draftsgrid = {
   A2: 'circle-1',
   A4: 'circle-2',
   A6: 'circle-3',
@@ -33,8 +54,11 @@ let drafts = {
 
 // Loop through the original object
 function makeCounter() {
-  for (const [key, value] of Object.entries(drafts)) {
+  for (const [key, value] of Object.entries(draftsgrid)) {
     console.log(`${key}: ${value}`);
+    // if(draftsgrid[key]==='circle-1') {
+    //   draftsgrid[key].classList.add("circle_black");
+    // }
   }
 }
 console.log(makeCounter());
