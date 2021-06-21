@@ -28,16 +28,16 @@ document.addEventListener("DOMContentLoaded",buildGameBoard);
 
 let circle1 = {}
 
-function buildGameBoard() {
-  console.log("This is the game board");
-  circle1 = document.createElement("div");
-  circle1.classList.add("circle_black");
-  circle1.x = gridContainer.top;
-  circle1.y = gridContainer.left;
-  circle1.style.top = circle1.y +"px";
-  circle1.style.left = circle1.x +"px";
-  container.appendChild(circle1);
-}
+// function buildGameBoard() {
+//   console.log("This is the game board");
+//   circle1 = document.createElement("div");
+//   circle1.classList.add("circle_black");
+//   circle1.x = gridContainer.top;
+//   circle1.y = gridContainer.left;
+//   circle1.style.top = circle1.y +"px";
+//   circle1.style.left = circle1.x +"px";
+//   container.appendChild(circle1);
+// }
 
 let draftsgrid = {
   A2: 'c-1',
